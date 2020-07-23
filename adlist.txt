@@ -1,0 +1,3 @@
+https://block.energized.pro/ultimate/formats/domains.txt
+https://block.energized.pro/extensions/xtreme/formats/domains.txt
+https://block.energized.pro/extensions/regional/formats/domains.txt
