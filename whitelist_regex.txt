@@ -1,0 +1,3 @@
+# Torrent trackers
+.*\.t-ru\.org
+.*\.rutracker\.cc

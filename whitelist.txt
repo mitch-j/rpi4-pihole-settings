@@ -1,0 +1,3 @@
+# https://kinopoisk.ru
+sso.passport.yandex.ru
+avatars.mds.yandex.net
