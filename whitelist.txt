@@ -8,4 +8,5 @@ zen.yandex.ru
 # https://www.gog.com
 api.gog.com
 images.gog.com
+items.gog.com
 profiles-static.gog.com
