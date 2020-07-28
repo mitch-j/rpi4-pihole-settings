@@ -6,7 +6,6 @@ avatars.mds.yandex.net
 zen.yandex.ru
 
 # https://www.gog.com
+api.gog.com
 images.gog.com
 profiles-static.gog.com
-images.gog-statics.com
-menu-static.gog-statics.com
