@@ -10,3 +10,6 @@ api.gog.com
 images.gog.com
 items.gog.com
 profiles-static.gog.com
+
+# https://nnmclub.to
+nnm-club.ws
