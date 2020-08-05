@@ -7,3 +7,7 @@ zen.yandex.ru
 
 # https://nnmclub.to
 nnm-club.ws
+
+# GeForce Experience
+services.gfe.nvidia.com
+api.gfe.nvidia.com
