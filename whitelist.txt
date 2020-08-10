@@ -1,18 +1,18 @@
-# https://kinopoisk.ru
+# Kinopoisk
 sso.passport.yandex.ru
 avatars.mds.yandex.net
 
-# https://zen.yandex.ru
+# Yandex Zen
 zen.yandex.ru
 
-# https://nnmclub.to
+# NNM-Club
 nnm-club.ws
 
-# GeForce Experience
+# Nvidia GeForce Experience
 services.gfe.nvidia.com
 api.gfe.nvidia.com
 
-# https://gog.com
+# GOG.com
 items.gog.com
 images.gog.com
 profiles-static.gog.com

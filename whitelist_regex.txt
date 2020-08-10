@@ -1,6 +1,6 @@
-# https://rutracker.org
+# RuTracker.org
 .*\.rutracker\.cc
 .*\.t-ru\.org
 
-# https://gog.com
+# GOG.com
 .*\.gog-statics\.com
