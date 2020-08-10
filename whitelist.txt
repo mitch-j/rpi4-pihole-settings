@@ -11,3 +11,9 @@ nnm-club.ws
 # GeForce Experience
 services.gfe.nvidia.com
 api.gfe.nvidia.com
+
+# https://gog.com
+items.gog.com
+images.gog.com
+profiles-static.gog.com
+insights-collector.gog.com
