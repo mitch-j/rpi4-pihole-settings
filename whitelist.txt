@@ -17,3 +17,7 @@ items.gog.com
 images.gog.com
 profiles-static.gog.com
 insights-collector.gog.com
+
+# Oculus
+graph.oculus.com
+
