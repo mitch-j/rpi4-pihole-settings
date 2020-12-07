@@ -3,6 +3,7 @@
 - [Pi-hole](https://github.com/pi-hole/pi-hole)
 - [pihole-updatelists](https://github.com/jacklul/pihole-updatelists)
 - [Energized Protection](https://github.com/EnergizedProtection/block)
+- [Commonly White List](https://github.com/anudeepND/whitelist)
 
 
 ## Main
@@ -28,7 +29,7 @@ Set lists for pihole-updatelists
 ADLISTS_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/adlist.txt"
 
 ; Remote list URL containing exact domains to whitelist
-WHITELIST_URL="https://github.com/EnergizedProtection/unblock/raw/master/basic/formats/domains.txt https://raw.githubusercontent.com/denis-g/pihole-adlists/master/whitelist.txt"
+WHITELIST_URL="https://github.com/EnergizedProtection/unblock/raw/master/basic/formats/domains.txt https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt https://raw.githubusercontent.com/denis-g/pihole-adlists/master/whitelist.txt"
 
 ; Remote list URL containing regex rules for whitelisting
 REGEX_WHITELIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/whitelist_regex.txt"

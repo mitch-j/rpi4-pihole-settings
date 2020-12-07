@@ -1,23 +1,24 @@
-# Kinopoisk
+### Social Networks
 sso.passport.yandex.ru
 avatars.mds.yandex.net
-
-# Yandex Zen
 zen.yandex.ru
 
-# NNM-Club
-nnm-club.ws
-
+### Games
 # Nvidia GeForce Experience
 services.gfe.nvidia.com
 api.gfe.nvidia.com
-
 # GOG.com
 items.gog.com
 images.gog.com
 profiles-static.gog.com
 insights-collector.gog.com
-
 # Oculus
 graph.oculus.com
+# Xbox
+v10.events.data.microsoft.com
+v20.events.data.microsoft.com
 
+### Global
+# Google Fonts
+fonts.gstatic.com
+fonts.googleapis.com

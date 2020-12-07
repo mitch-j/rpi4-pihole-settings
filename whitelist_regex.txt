@@ -1,6 +1,12 @@
-# RuTracker.org
+# Torrents
 .*\.rutracker\.cc
 .*\.t-ru\.org
+.*\.nnm-club\.ws
 
-# GOG.com
+# Games
 .*\.gog-statics\.com
+
+# CDN
+.*\.cloudfront\.net
+.*\.v0cdn\.net
+.*\.hwcdn\.net
