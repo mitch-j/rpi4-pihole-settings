@@ -5,24 +5,31 @@
 - [Energized Protection](https://github.com/EnergizedProtection/block)
 - [Commonly White List](https://github.com/anudeepND/whitelist)
 
+## Setup
 
-## Main
+```sh
+sudo apt-get install php-cli php-sqlite3 php-intl php-curl
+wget -O - https://raw.githubusercontent.com/jacklul/pihole-updatelists/master/install.sh | sudo bash
+```
+
+## Configuration
 
 Clear all preinstalled Pi-hole lists
 
 ```sh
-sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=0;" # whitelist
-sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=1;" # blacklist
-sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=2;" # regex whitelist
-sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=3;" # regex blacklist
-
-sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=0;" # disabled adlists
-sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=1;" # enabled adlists
+sudo sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=0;" # whitelist
+sudo sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=1;" # blacklist
+sudo sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=2;" # regex whitelist
+sudo sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=3;" # regex blacklist
+sudo sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=0;" # disabled adlists
+sudo sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=1;" # enabled adlists
 ```
 
 Update lists on `pihole-updatelists` config
 
-`sudo nano /etc/pihole-updatelists.conf`
+```sh
+sudo nano /etc/pihole-updatelists.conf
+```
 
 ```
 ADLISTS_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/adlist.txt"
@@ -34,9 +41,16 @@ REGEX_WHITELIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/ma
 BLACKLIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/blacklist.txt"
 
 REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list https://raw.githubusercontent.com/denis-g/pihole-adlists/master/blacklist_regex.txt"
-
 ```
 
 Update lists
 
-`pihole-updatelists`
+```sh
+sudo pihole-updatelists
+```
+
+## Update system
+
+```sh
+sudo apt update && apt upgrade && apt autoclean && apt clean && apt autoremove && pihole-updatelists --update && pihole -up && rpi-update && reboot
+```
