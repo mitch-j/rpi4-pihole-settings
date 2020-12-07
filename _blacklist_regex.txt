@@ -1,2 +1,0 @@
-https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list
-https://raw.githubusercontent.com/denis-g/pihole-adlists/master/blacklist_regex.txt

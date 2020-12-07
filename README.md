@@ -8,9 +8,9 @@
 
 ## Main
 
-Clear all preinstalled pi-hole lists
+Clear all preinstalled Pi-hole lists
 
-```
+```sh
 sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=0;" # whitelist
 sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=1;" # blacklist
 sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=2;" # regex whitelist
@@ -20,25 +20,20 @@ sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=0;" # disabled 
 sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=1;" # enabled adlists
 ```
 
-Set lists for pihole-updatelists
+Update lists on `pihole-updatelists` config
 
-`nano /etc/pihole-updatelists.conf`
+`sudo nano /etc/pihole-updatelists.conf`
 
 ```
-; Remote list URL containing list of adlists to import
-ADLISTS_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/_adlist.txt"
+ADLISTS_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/adlist.txt"
 
-; Remote list URL containing exact domains to whitelist
-WHITELIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/_whitelist.txt"
+WHITELIST_URL="https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt https://raw.githubusercontent.com/denis-g/pihole-adlists/master/whitelist.txt"
 
-; Remote list URL containing regex rules for whitelisting
-REGEX_WHITELIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/_whitelist_regex.txt"
+REGEX_WHITELIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/whitelist_regex.txt"
 
-; Remote list URL containing exact domains to blacklist
-BLACKLIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/_blacklist.txt"
+BLACKLIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/blacklist.txt"
 
-; Remote list URL containing regex rules for blacklisting
-REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/_blacklist_regex.txt"
+REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list https://raw.githubusercontent.com/denis-g/pihole-adlists/master/blacklist_regex.txt"
 
 ```
 
