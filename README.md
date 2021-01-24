@@ -52,5 +52,13 @@ sudo pihole-updatelists
 ## Update system
 
 ```sh
-sudo apt update && apt upgrade && apt autoclean && apt clean && apt autoremove && pihole-updatelists --update && pihole -up && rpi-update && reboot
+sudo apt update && \
+     apt upgrade && \
+     apt autoclean && \
+     apt clean && \
+     apt autoremove && \
+     pihole-updatelists --update && \
+     pihole -up && \
+     rpi-update && \
+     reboot
 ```

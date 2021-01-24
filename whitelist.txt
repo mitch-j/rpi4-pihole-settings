@@ -17,6 +17,8 @@ graph.oculus.com
 # Xbox
 v10.events.data.microsoft.com
 v20.events.data.microsoft.com
+# Ubisoft
+ubiservices.data.ubi.com
 
 ### Global
 # Google Fonts
