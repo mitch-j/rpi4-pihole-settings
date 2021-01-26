@@ -1,6 +1,9 @@
 ### Social Networks
+# Kinopoisk
 sso.passport.yandex.ru
 avatars.mds.yandex.net
+kinopoisk-ru.naydex.net
+# Yandex
 zen.yandex.ru
 
 ### Games
@@ -19,6 +22,7 @@ v10.events.data.microsoft.com
 v20.events.data.microsoft.com
 # Ubisoft
 ubiservices.data.ubi.com
+uat-ubiservices.data.ubi.com
 
 ### Global
 # Google Fonts
