@@ -1,15 +1,15 @@
-### Social Networks
+### Sites
 # Kinopoisk
 sso.passport.yandex.ru
 avatars.mds.yandex.net
 kinopoisk-ru.naydex.net
 # Yandex
 zen.yandex.ru
+# OSZone
+oszone.net
+www.oszone.net
 
 ### Games
-# Nvidia GeForce Experience
-services.gfe.nvidia.com
-api.gfe.nvidia.com
 # GOG.com
 items.gog.com
 images.gog.com
