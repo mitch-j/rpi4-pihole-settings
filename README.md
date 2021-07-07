@@ -9,8 +9,8 @@
 
 ### Install
 
-- Download and burn SD card.
-- Create a new empty file named `ssh`, without any extension, inside the boot directory.
+- Download image and burn SD card.
+- Create a new empty file `ssh` inside `/boot` directory.
 
 ### Configuration
 
@@ -51,7 +51,7 @@ gpu_mem=16
 ### Install
 
 ```console
-curl -sSL https://install.pi-hole.net | bash
+curl -sSL https://install.pi-hole.net | sudo bash
 ```
 
 ---
@@ -61,7 +61,7 @@ curl -sSL https://install.pi-hole.net | bash
 ### Install
 
 ```console
-sudo apt-get install php-cli php-sqlite3 php-intl php-curl
+sudo apt install php-cli php-sqlite3 php-intl php-curl
 wget -O - https://raw.githubusercontent.com/jacklul/pihole-updatelists/master/install.sh | sudo bash
 ```
 
@@ -102,12 +102,12 @@ REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/maste
 
 ```console
 sudo apt update && \
-     apt upgrade && \
-     apt clean && \
-     apt autoclean && \
-     apt autoremove && \
-     pihole-updatelists --update && \
-     pihole -up && \
-     rpi-update && \
-     reboot
+sudo apt upgrade && \
+sudo apt clean && \
+sudo apt autoclean && \
+sudo apt autoremove && \
+sudo pihole-updatelists --update && \
+sudo pihole -up && \
+sudo rpi-update && \
+sudo reboot
 ```
