@@ -45,6 +45,19 @@ dtparam=i2s=off
 dtparam=spi=off
 ```
 
+```console
+sudo nano /etc/sysctl.conf
+```
+
+```ini
+# Disable IPv6
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+net.ipv6.conf.eth0.disable_ipv6 = 1
+net.ipv6.conf.wlan0.disable_ipv6 = 1
+```
+
 ---
 
 ## Pi-hole
