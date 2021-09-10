@@ -15,7 +15,7 @@
 
 Disable all interfaces, sound, and video.
 
-```console
+```shell
 sudo nano /boot/config.txt
 ```
 
@@ -46,7 +46,7 @@ dtparam=i2s=off
 dtparam=spi=off
 ```
 
-```console
+```shell
 sudo nano /etc/sysctl.conf
 ```
 
@@ -59,13 +59,17 @@ net.ipv6.conf.eth0.disable_ipv6 = 1
 net.ipv6.conf.wlan0.disable_ipv6 = 1
 ```
 
+```shell
+timedatectl set-timezone Europe/Minsk
+```
+
 ---
 
 ## Pi-hole
 
 ### Install
 
-```console
+```shell
 curl -sSL https://install.pi-hole.net | sudo bash
 ```
 
@@ -75,7 +79,7 @@ curl -sSL https://install.pi-hole.net | sudo bash
 
 ### Install
 
-```console
+```shell
 sudo apt install php-cli php-sqlite3 php-intl php-curl && \
 wget -O - https://raw.githubusercontent.com/jacklul/pihole-updatelists/master/install.sh | sudo bash
 ```
@@ -84,18 +88,18 @@ wget -O - https://raw.githubusercontent.com/jacklul/pihole-updatelists/master/in
 
 Clear all preinstalled Pi-hole ad-lists.
 
-```console
+```shell
 sudo sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=0;" # whitelist
 sudo sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=1;" # blacklist
 sudo sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=2;" # regex whitelist
 sudo sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=3;" # regex blacklist
-sudo sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=0;" # disabled adlists
-sudo sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=1;" # enabled adlists
+sudo sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=0;"  # disabled adlists
+sudo sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=1;"  # enabled adlists
 ```
 
 Set new ad-lists.
 
-```console
+```shell
 sudo nano /etc/pihole-updatelists.conf
 ```
 
@@ -111,7 +115,7 @@ REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/maste
 
 ## Update system
 
-```console
+```shell
 sudo apt update && \
 sudo apt upgrade && \
 sudo apt clean && \
