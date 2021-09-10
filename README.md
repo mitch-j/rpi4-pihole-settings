@@ -20,26 +20,27 @@ sudo nano /boot/config.txt
 ```
 
 ```ini
-# Disable Audio
+# disable Audio
 dtparam=audio=off
 
-# Disable WiFi and Bluetooth
+# disable WiFi and Bluetooth
 dtoverlay=disable-wifi
 dtoverlay=disable-bt
 
-# Disable HDMI
+# disable HDMI
 # On the Raspberry Pi 4, setting hdmi_blanking=1 will not cause the HDMI output to be switched off,
 # since this feature has not yet been implemented.
 hdmi_blanking=1
 max_framebuffers=0
 
-# Give more RAM to the CPU
-gpu_mem=16
+# give more RAM to the CPU
+# only for console using
+gpu_mem=1
 
-# Disable Serial Port
+# disable Serial Port
 enable_uart=0
 
-# Disable External interfaces
+# disable External interfaces
 dtparam=i2c=off
 dtparam=i2s=off
 dtparam=spi=off
@@ -50,7 +51,7 @@ sudo nano /etc/sysctl.conf
 ```
 
 ```ini
-# Disable IPv6
+# disable IPv6
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 net.ipv6.conf.lo.disable_ipv6 = 1
