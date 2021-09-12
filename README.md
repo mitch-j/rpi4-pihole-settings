@@ -13,7 +13,7 @@
 
 ### Configuration
 
-Disable all interfaces, sound, and video.
+Disable all interfaces, sound, and video:
 
 ```shell
 sudo nano /boot/config.txt
@@ -46,12 +46,13 @@ dtparam=i2s=off
 dtparam=spi=off
 ```
 
+Disable IPv6:
+
 ```shell
 sudo nano /etc/sysctl.conf
 ```
 
 ```ini
-# disable IPv6
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 net.ipv6.conf.lo.disable_ipv6 = 1
@@ -59,8 +60,10 @@ net.ipv6.conf.eth0.disable_ipv6 = 1
 net.ipv6.conf.wlan0.disable_ipv6 = 1
 ```
 
+Set time zone:
+
 ```shell
-timedatectl set-timezone Europe/Minsk
+sudo timedatectl set-timezone Europe/Minsk
 ```
 
 ---
@@ -86,7 +89,7 @@ wget -O - https://raw.githubusercontent.com/jacklul/pihole-updatelists/master/in
 
 ### Configuration
 
-Clear all preinstalled Pi-hole ad-lists.
+Clear all preinstalled Pi-hole ad-lists:
 
 ```shell
 sudo sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=0;" # whitelist
@@ -97,7 +100,7 @@ sudo sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=0;"  # dis
 sudo sqlite3 /etc/pihole/gravity.db "delete from adlist where enabled=1;"  # enabled adlists
 ```
 
-Set new ad-lists.
+Set new ad-lists:
 
 ```shell
 sudo nano /etc/pihole-updatelists.conf
