@@ -6,7 +6,7 @@
 - [DNSCrypt](https://github.com/DNSCrypt/dnscrypt-proxy/)
 - [Energized Protection](https://github.com/EnergizedProtection/block) | [Commonly White List](https://github.com/anudeepND/whitelist)
 
-## :small_blue_diamond: Raspberry Pi OS Lite
+## 🔹 Raspberry Pi OS Lite
 
 ### Install
 
@@ -69,7 +69,7 @@ sudo timedatectl set-timezone Europe/Minsk
 
 ---
 
-## :small_blue_diamond: Pi-hole
+## 🔹 Pi-hole
 
 ### Install
 
@@ -79,7 +79,7 @@ curl -sSL https://install.pi-hole.net | sudo bash
 
 ---
 
-## :small_blue_diamond: pihole-updatelists
+## 🔹 pihole-updatelists
 
 ### Install
 
@@ -117,7 +117,7 @@ REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/maste
 
 ---
 
-## :small_blue_diamond: DNSCrypt
+## 🔹 DNSCrypt
 
 ### Install
 
@@ -163,7 +163,7 @@ Custom 1 (IPv4):
 
 ---
 
-## :small_blue_diamond: Update system
+## 🔹 Update system
 
 ```shell
 sudo apt update && \
