@@ -3,9 +3,10 @@
 - [Raspberry Pi OS Lite](https://www.raspberrypi.org/software/operating-systems/)
 - [Pi-hole](https://github.com/pi-hole/pi-hole)
 - [pihole-updatelists](https://github.com/jacklul/pihole-updatelists)
+- [DNSCrypt](https://github.com/DNSCrypt/dnscrypt-proxy/)
 - [Energized Protection](https://github.com/EnergizedProtection/block) | [Commonly White List](https://github.com/anudeepND/whitelist)
 
-## Raspberry Pi OS Lite
+## :small_blue_diamond: Raspberry Pi OS Lite
 
 ### Install
 
@@ -68,7 +69,7 @@ sudo timedatectl set-timezone Europe/Minsk
 
 ---
 
-## Pi-hole
+## :small_blue_diamond: Pi-hole
 
 ### Install
 
@@ -78,7 +79,7 @@ curl -sSL https://install.pi-hole.net | sudo bash
 
 ---
 
-## pihole-updatelists
+## :small_blue_diamond: pihole-updatelists
 
 ### Install
 
@@ -116,7 +117,53 @@ REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/maste
 
 ---
 
-## Update system
+## :small_blue_diamond: DNSCrypt
+
+### Install
+
+Copy URL to latest **ARM** release from [this page](https://github.com/DNSCrypt/dnscrypt-proxy/releases):
+
+```shell
+sudo wget https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/2.1.0/dnscrypt-proxy-linux_arm-2.1.0.tar.gz
+sudo tar -xvzf ./dnscrypt-proxy-linux_arm-2.1.0.tar.gz
+sudo rm dnscrypt-proxy-linux_arm-2.1.0.tar.gz
+
+sudo mv ./linux-arm ./dnscrypt-proxy
+sudo cp ./dnscrypt-proxy/example-dnscrypt-proxy.toml ./dnscrypt-proxy/dnscrypt-proxy.toml
+```
+
+### Configuration
+
+Set servers and port for service:
+
+```shell
+sudo nano ./dnscrypt-proxy/dnscrypt-proxy.toml
+```
+
+```ini
+server_names = ['scaleway-fr']
+
+# don't use 53 or 5353 port
+listen_addresses = ['127.0.0.1:54']
+```
+
+Install and start service:
+
+```shell
+sudo ./dnscrypt-proxy/dnscrypt-proxy -service install && \
+sudo ./dnscrypt-proxy/dnscrypt-proxy -service start
+```
+
+Set service as custom DNS on admin panel - Settings > DNS:
+
+```ini
+Custom 1 (IPv4):
+127.0.0.1#54
+```
+
+---
+
+## :small_blue_diamond: Update system
 
 ```shell
 sudo apt update && \
