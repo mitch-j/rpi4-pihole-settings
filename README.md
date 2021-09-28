@@ -108,11 +108,11 @@ sudo nano /etc/pihole-updatelists.conf
 ```
 
 ```ini
-ADLISTS_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/adlist.txt"
-WHITELIST_URL="https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt https://raw.githubusercontent.com/denis-g/pihole-adlists/master/whitelist.txt"
-REGEX_WHITELIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/whitelist_regex.txt"
-BLACKLIST_URL="https://raw.githubusercontent.com/denis-g/pihole-adlists/master/blacklist.txt"
-REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list https://raw.githubusercontent.com/denis-g/pihole-adlists/master/blacklist_regex.txt"
+ADLISTS_URL="https://raw.githubusercontent.com/denis-g/rpi4-pihole-settings/master/adlist.txt"
+WHITELIST_URL="https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt https://raw.githubusercontent.com/denis-g/rpi4-pihole-settings/master/whitelist.txt"
+REGEX_WHITELIST_URL="https://raw.githubusercontent.com/denis-g/rpi4-pihole-settings/master/whitelist_regex.txt"
+BLACKLIST_URL="https://raw.githubusercontent.com/denis-g/rpi4-pihole-settings/master/blacklist.txt"
+REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list https://raw.githubusercontent.com/denis-g/rpi4-pihole-settings/master/blacklist_regex.txt"
 ```
 
 ---
@@ -141,7 +141,7 @@ sudo nano ./dnscrypt-proxy/dnscrypt-proxy.toml
 ```
 
 ```ini
-server_names = ['scaleway-fr']
+server_names = ['cloudflare-family', 'cloudflare']
 
 # don't use 53 or 5353 port
 listen_addresses = ['127.0.0.1:54']
@@ -154,7 +154,7 @@ sudo ./dnscrypt-proxy/dnscrypt-proxy -service install && \
 sudo ./dnscrypt-proxy/dnscrypt-proxy -service start
 ```
 
-Set service as custom DNS on admin panel - Settings > DNS:
+Set service as custom DNS on Pi-hole admin panel - Settings > DNS:
 
 ```ini
 Custom 1 (IPv4):
