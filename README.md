@@ -10,9 +10,37 @@
 
 ### Install
 
-- Create a new empty file `ssh` inside `/boot` directory.
+Download and install [Raspberry Pi Imager](https://www.raspberrypi.com/software/):
+
+- Select **Raspberry Pi OS Lite**
+- Select storage
+- Click `Settings` and set up
+  - [x] Disable overscan
+  - [x] Set hostname
+  - [x] Enable SSH
+  - [x] Set username and password
+  - [ ] Configure wifi
+  - [x] Set locale settings
+  - [ ] Play sound when finished
+  - [x] Eject media when finished
+  - [ ] Enable telemetry
+- Click `Write`
 
 ### Configuration
+
+Connect to your device:
+
+```shell
+ssh username@raspberrypi.local
+```
+
+Set up Raspberry Pi OS:
+
+```shell
+sudo raspi-config
+```
+
+- set locale as `en_US.UTF-8 UTF-8`
 
 Disable all interfaces, sound, and video:
 
@@ -21,30 +49,28 @@ sudo nano /boot/config.txt
 ```
 
 ```ini
-# disable Audio
+# Enable audio (loads snd_bcm2835)
 dtparam=audio=off
 
-# disable WiFi and Bluetooth
+# Automatically load overlays for detected cameras
+camera_auto_detect=0
+
+# Automatically load overlays for detected DSI displays
+display_auto_detect=0
+
+# WiFi and Bluetooth
 dtoverlay=disable-wifi
 dtoverlay=disable-bt
 
-# disable HDMI
+# HDMI
 # On the Raspberry Pi 4, setting hdmi_blanking=1 will not cause the HDMI output to be switched off,
-# since this feature has not yet been implemented.
+# since this feature has not yet been implemented
 hdmi_blanking=1
 max_framebuffers=0
 
-# give more RAM to the CPU
-# only for console using
+# RAM to the CPU, only for console using
 gpu_mem=1
 
-# disable Serial Port
-enable_uart=0
-
-# disable External interfaces
-dtparam=i2c=off
-dtparam=i2s=off
-dtparam=spi=off
 ```
 
 Disable IPv6:
@@ -54,17 +80,12 @@ sudo nano /etc/sysctl.conf
 ```
 
 ```ini
+# Disable IPv6
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 net.ipv6.conf.lo.disable_ipv6 = 1
 net.ipv6.conf.eth0.disable_ipv6 = 1
 net.ipv6.conf.wlan0.disable_ipv6 = 1
-```
-
-Set time zone:
-
-```shell
-sudo timedatectl set-timezone Europe/Minsk
 ```
 
 ---
@@ -77,6 +98,10 @@ sudo timedatectl set-timezone Europe/Minsk
 curl -sSL https://install.pi-hole.net | sudo bash
 ```
 
+### Configuration
+
+Use wizard and set up.
+
 ---
 
 ## 🔹 pihole-updatelists
@@ -84,7 +109,7 @@ curl -sSL https://install.pi-hole.net | sudo bash
 ### Install
 
 ```shell
-sudo apt install php-cli php-sqlite3 php-intl php-curl && \
+sudo apt-get install php-cli sqlite3 php-sqlite3 php-intl php-curl && \
 wget -O - https://raw.githubusercontent.com/jacklul/pihole-updatelists/master/install.sh | sudo bash
 ```
 
