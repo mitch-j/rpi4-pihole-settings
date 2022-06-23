@@ -1,10 +1,11 @@
 # Personal Raspberry Pi 4 and Pi-hole settings
 
 - [Raspberry Pi OS Lite](https://www.raspberrypi.org/software/operating-systems/)
+- [log2ram](https://github.com/azlux/log2ram)
 - [Pi-hole](https://github.com/pi-hole/pi-hole)
 - [pihole-updatelists](https://github.com/jacklul/pihole-updatelists)
-- [DNSCrypt](https://github.com/DNSCrypt/dnscrypt-proxy/)
 - [Energized Protection](https://github.com/EnergizedProtection/block) | [Commonly White List](https://github.com/anudeepND/whitelist)
+- [DNSCrypt](https://github.com/DNSCrypt/dnscrypt-proxy/) (Optional)
 
 ## 🔹 Raspberry Pi OS Lite
 
@@ -90,6 +91,42 @@ net.ipv6.conf.wlan0.disable_ipv6 = 1
 
 ---
 
+## 🔹 log2ram
+
+### Install
+
+```shell
+sudo apt install rsync && \
+echo "deb [signed-by=/usr/share/keyrings/azlux-archive-keyring.gpg] http://packages.azlux.fr/debian/ bullseye main" | sudo tee /etc/apt/sources.list.d/azlux.list && \
+sudo wget -O /usr/share/keyrings/azlux-archive-keyring.gpg https://azlux.fr/repo.gpg && \
+sudo apt update && \
+sudo apt install log2ram
+```
+
+### Configuration
+
+```shell
+sudo nano /etc/log2ram.conf
+```
+
+For generates many logs (like a Pi-hole), you needed to increasing this to a larger amount, such as 256M.
+
+```ini
+SIZE=256M
+```
+
+Deletion of old "archived" logs can be fixed by adjusting a setting:
+
+```shell
+sudo nano /etc/systemd/journald.conf
+```
+
+```ini
+SystemMaxUse=20M
+```
+
+---
+
 ## 🔹 Pi-hole
 
 ### Install
@@ -142,16 +179,16 @@ REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/maste
 
 ---
 
-## 🔹 DNSCrypt
+## 🔹 DNSCrypt (Optional)
 
 ### Install
 
 Copy URL to latest **ARM** release from [this page](https://github.com/DNSCrypt/dnscrypt-proxy/releases):
 
 ```shell
-sudo wget https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/2.1.0/dnscrypt-proxy-linux_arm-2.1.0.tar.gz
-sudo tar -xvzf ./dnscrypt-proxy-linux_arm-2.1.0.tar.gz
-sudo rm dnscrypt-proxy-linux_arm-2.1.0.tar.gz
+sudo wget https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/2.1.1/dnscrypt-proxy-linux_arm-2.1.1.tar.gz
+sudo tar -xvzf ./dnscrypt-proxy-linux_arm-2.1.1.tar.gz
+sudo rm dnscrypt-proxy-linux_arm-2.1.1.tar.gz
 
 sudo mv ./linux-arm ./dnscrypt-proxy
 sudo cp ./dnscrypt-proxy/example-dnscrypt-proxy.toml ./dnscrypt-proxy/dnscrypt-proxy.toml
@@ -188,7 +225,7 @@ Custom 1 (IPv4):
 
 ---
 
-## 🔹 Update system
+## 🔹 Update system and reboot
 
 ```shell
 sudo apt update && \
