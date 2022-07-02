@@ -17,12 +17,19 @@ profiles-static.gog.com
 insights-collector.gog.com
 # Oculus
 graph.oculus.com
+graph.facebook.com
 # Xbox
 v10.events.data.microsoft.com
 v20.events.data.microsoft.com
 # Ubisoft
 ubiservices.data.ubi.com
 uat-ubiservices.data.ubi.com
+
+### Social
+# AppStore
+amp-api-edge.apps.apple.com
+# Instagram
+i.instagram.com
 
 ### Global
 # Google Fonts
