@@ -26,11 +26,21 @@ ubiservices.data.ubi.com
 uat-ubiservices.data.ubi.com
 
 ### Social
-# AppStore
+# iOS
 api.apps.apple.com
 api-edge.apps.apple.com
 amp-api-edge.apps.apple.com
 amp-api-search-edge.apps.apple.com
+sf-api-token-service.itunes.apple.com
+amp-api-edge-lb.itunes-apple.com.akadns.net
+api.music.apple.com
+amp-api-edge.music.apple.com
+api.itunes.apple.com
+uts-api-siri.itunes.apple.com
+api.podcasts.apple.com
+amp-api.podcasts.apple.com
+api.books.apple.com
+api.videos.apple.com
 # Instagram
 i.instagram.com
 
