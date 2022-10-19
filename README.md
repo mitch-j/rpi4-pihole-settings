@@ -170,11 +170,11 @@ sudo nano /etc/pihole-updatelists.conf
 ```
 
 ```ini
-ADLISTS_URL="https://raw.githubusercontent.com/denis-g/rpi4-pihole-settings/master/adlist.txt"
-WHITELIST_URL="https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt https://raw.githubusercontent.com/denis-g/rpi4-pihole-settings/master/whitelist.txt"
-REGEX_WHITELIST_URL="https://raw.githubusercontent.com/denis-g/rpi4-pihole-settings/master/whitelist_regex.txt"
-BLACKLIST_URL="https://raw.githubusercontent.com/denis-g/rpi4-pihole-settings/master/blacklist.txt"
-REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list https://raw.githubusercontent.com/denis-g/rpi4-pihole-settings/master/blacklist_regex.txt"
+ADLISTS_URL="https://raw.githubusercontent.com/mitch-j/rpi4-pihole-settings/master/adlist.txt"
+WHITELIST_URL="https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt https://raw.githubusercontent.com/mitch-j/rpi4-pihole-settings/master/whitelist.txt"
+REGEX_WHITELIST_URL="https://raw.githubusercontent.com/mitch-j/rpi4-pihole-settings/master/whitelist_regex.txt"
+BLACKLIST_URL="https://raw.githubusercontent.com/mitch-j/rpi4-pihole-settings/master/blacklist.txt"
+REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list https://raw.githubusercontent.com/mitch-j/rpi4-pihole-settings/master/blacklist_regex.txt"
 ```
 
 ---
