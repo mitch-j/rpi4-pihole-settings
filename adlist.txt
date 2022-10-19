@@ -1,3 +1,11 @@
 https://block.energized.pro/ultimate/formats/domains.txt
 https://block.energized.pro/extensions/xtreme/formats/domains.txt
 https://block.energized.pro/extensions/regional/formats/domains.txt
+https://blocklistproject.github.io/Lists/abuse.txt
+https://blocklistproject.github.io/Lists/ads.txt
+https://blocklistproject.github.io/Lists/crypto.txt
+https://blocklistproject.github.io/Lists/fraud.txt
+https://blocklistproject.github.io/Lists/malware.txt
+https://blocklistproject.github.io/Lists/phishing.txt
+https://blocklistproject.github.io/Lists/ransomware.txt
+https://blocklistproject.github.io/Lists/tracking.txt
