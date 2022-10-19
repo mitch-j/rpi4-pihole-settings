@@ -1,13 +1,6 @@
 ### Sites
-# Kinopoisk
-sso.passport.yandex.ru
-avatars.mds.yandex.net
-kinopoisk-ru.naydex.net
-# Yandex
-zen.yandex.ru
-# OSZone
-oszone.net
-www.oszone.net
+# Misc
+cultdeadcow.com
 
 ### Games
 # GOG.com
@@ -15,15 +8,27 @@ items.gog.com
 images.gog.com
 profiles-static.gog.com
 insights-collector.gog.com
-# Oculus
-graph.oculus.com
-graph.facebook.com
 # Xbox
 v10.events.data.microsoft.com
 v20.events.data.microsoft.com
 # Ubisoft
 ubiservices.data.ubi.com
 uat-ubiservices.data.ubi.com
+
+### Streaming
+# Hulu
+ads-fa-darwin.hulustream.com
+ads-a-darwin.hulustream.com
+ads-e-darwin.hulustream.com
+cws-hulu.conviva.com
+doppler.hulu.com
+vortex.hulu.com
+ads-v-darwin.hulustream.com
+# Roku
+cloudservices.roku.com
+scribe.logs.roku.com
+cooper.logs.roku.com
+liberty.logs.roku.com
 
 ### Social
 # iOS
@@ -43,8 +48,19 @@ api.books.apple.com
 api.videos.apple.com
 # Instagram
 i.instagram.com
+# Facebook
+web.facebook.com
+graph.facebook.com
+# YouTube
+accounts.youtube.com
 
 ### Global
 # Google Fonts
 fonts.gstatic.com
 fonts.googleapis.com
+maps.gstatic.com
+
+### Banking
+# Wells Fargo
+connect.secure.wellsfargo.com
+rubicon.wellsfargo.com
